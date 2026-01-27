@@ -14,8 +14,8 @@ import './globals.css';
 // });
 
 const pretendard = localFont({
-  src: '../public/fonts/PretendardVariable.woff2',
-  variable: '--font-sans',
+  src: '../../public/fonts/PretendardVariable.woff2',
+  variable: '--font-pretendard',
   display: 'swap',
 });
 
@@ -32,7 +32,8 @@ export default function RootLayout({
   return (
     <html lang="ko">
       {/* <Header /> */}
-      <body className={pretendard.variable}>
+      {/* tailwindcss로 font-sans라고 지정해주면 pretendard 폰트로 보여줌 */}
+      <body className={`${pretendard.variable} font-sans`}>
         {/* ✅ TODO: 전역 Provider 감싸기 */}
         {children}
       </body>
