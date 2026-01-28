@@ -8,7 +8,7 @@ import PasswordForm from '../_components/PasswordForm';
 import AuthBtn from '../_components/AuthBtn';
 
 // 로그인 화면
-export default function Page() {
+export default function LoginPage() {
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -59,11 +59,16 @@ export default function Page() {
 
           {/* 비밀번호 */}
           <PasswordForm
-            password={password}
-            onChangePassword={handlePasswordChange}
+            id="password"
+            name="password"
+            label="비밀번호"
+            placeholder="비밀번호를 입력하세요"
+            value={password}
+            onChange={handlePasswordChange}
             error={error}
             showPassword={showPassword}
             toggleShowPassword={() => setShowPassword((prev) => !prev)}
+            autoComplete="password"
           />
         </article>
 
