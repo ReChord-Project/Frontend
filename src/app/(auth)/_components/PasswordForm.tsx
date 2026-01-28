@@ -32,7 +32,7 @@ export default function PasswordForm({
 }: PasswordFormProps) {
   return (
     <div className="flex flex-col gap-1">
-      <label htmlFor="id" className="text-[#9CA3AF] text-base font-medium">
+      <label htmlFor={id} className="text-[#9CA3AF] text-base font-medium">
         {label}
       </label>
       <div className="relative">
